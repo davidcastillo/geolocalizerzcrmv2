@@ -1,11 +1,18 @@
 import express from 'express';
 import fetch from 'node-fetch';
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+import * as path from 'path';
+
 dotenv.config()
 
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+
+
+//app.use(express.static(path.join(__dirname, 'client/build')))
+
 
 
 app.get('/api/cities', async (req, res) => {
