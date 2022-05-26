@@ -8,7 +8,7 @@ function App() {
     //var key = '';
     useEffect(()=>{
 
-      fetch('/api/cities')
+      fetch('https://www.givingis.cool/api/cities')
       .then(response => response.json())
       .then(data => {
         setEventData(data.citiesInZCRM.data)
